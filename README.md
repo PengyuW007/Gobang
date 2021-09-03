@@ -25,3 +25,16 @@
 
 1. Who first? Black first
 2. 5 stones in a line, either straight or diagnol.
+
+### Classes
+
+1. Main
+   1. Game,
+      1. to run the model,
+      2. initialize game,
+      3. set who first
+2. Player interface
+   1. AI
+   2. Human
+3. Chess
+   1. White/Black
