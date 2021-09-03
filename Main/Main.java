@@ -19,7 +19,6 @@ public class Main {
         do {
             startQuit = scan.nextInt();
             if (startQuit == 1) {
-
                 System.out.println("\n"+"Now start Game!");
                 //Start the game
                 aiOrPvp();
