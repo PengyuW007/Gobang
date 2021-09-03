@@ -1,6 +1,10 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+Gobang.iml
+misc.xml
+modules.xml
+vcs.xml
 # Datasource local storage ignored files
 /../../../../../:\ProjectsGithub\JavaProject\Gobang\.idea/dataSources/
 /dataSources.local.xml
