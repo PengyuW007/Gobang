@@ -21,8 +21,8 @@ public class Main {
             if (startQuit == 1) {
                 System.out.println("Now start Game!");
                 //Start the game
+                aiOrPvp();
 
-                //Game game = new Game(1);
                 valid = true;
             } else if (startQuit == 2) {
                 valid = true;
@@ -58,6 +58,32 @@ public class Main {
             }
         } while (!valid);
 
-    }
+    }//end aiOrPVP
+
+    public static void initializeBoard(){
+        System.out.println("Which size of the board you want to play");
+        System.out.println("1. 9*9"+"\t"+"2. 15*15"+"\t"+"3. 19*19");
+
+        Scanner scan = new Scanner(System.in);
+        Boolean valid = false;
+
+        do {
+            int choice = scan.nextInt();
+            if (choice == 1) {
+                //9*9
+                Game game = new Game(9);
+                valid = true;
+            } else if (choice == 2) {
+                //15*15
+                Game game = new Game(15);
+                valid = true;
+            } else if(choice ==3){
+                //19*19
+                Game game = new Game(19);
+            }else{
+                System.out.println("Not valid input. (Type 1, 2 or 3)Try again!");
+            }
+        } while (!valid);
+    }//end initializeBoard
 
 }

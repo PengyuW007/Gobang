@@ -4,5 +4,9 @@ public class Game {
 
     public Game(int grid){
         board = new Board(grid);
+    }//end constructor
+
+    public void play(){
+
     }
 }
