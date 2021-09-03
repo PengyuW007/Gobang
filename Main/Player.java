@@ -1,11 +1,4 @@
-public class Player implements  IPlayer{
-    @Override
-    public void play() {
-
-    }
-
-    @Override
-    public int numHands() {
-        return 0;
-    }
+public abstract class Player implements  IPlayer{
+   public abstract void play();
+   public abstract int numHands();
 }
