@@ -9,4 +9,8 @@ public class Game {
     public void play(){
 
     }
+
+    public Board getBoard(){
+        return board;
+    }
 }

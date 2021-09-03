@@ -23,5 +23,6 @@ public class Board {
                 System.out.print(board[i][j]+" ");
             }
         }
+        System.out.println();
     }//end printBoard
 }

@@ -23,7 +23,7 @@ public class Main {
                 System.out.println("\n"+"Now start Game!");
                 //Start the game
                 aiOrPvp();
-
+                initializeBoard();
                 valid = true;
             } else if (startQuit == 2) {
                 valid = true;
@@ -62,24 +62,27 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
         Boolean valid = false;
-
+        Game game = null;
         do {
             int choice = scan.nextInt();
             if (choice == 1) {
                 //9*9
-                Game game = new Game(9);
+                 game = new Game(9);
                 valid = true;
             } else if (choice == 2) {
                 //15*15
-                Game game = new Game(15);
+                game = new Game(15);
                 valid = true;
             } else if (choice == 3) {
                 //19*19
-                Game game = new Game(19);
+               game = new Game(19);
             } else {
                 System.out.println("Not valid input. (Type 1, 2 or 3)Try again!");
             }
         } while (!valid);
+
+        Board board = game.getBoard();
+        board.printBoard();
     }//end initializeBoard
 
 }
