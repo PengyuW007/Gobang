@@ -3,6 +3,7 @@ public class Game {
     private Board board;
 
     public Game(int grid){
+        this.grid = grid;
         board = new Board(grid);
     }//end constructor
 
