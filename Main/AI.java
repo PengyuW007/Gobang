@@ -1,12 +1,18 @@
 public class AI extends Player{
 
+    public AI(String chess) {
+        super(chess);
+    }
+
     @Override
     public void play() {
 
     }
 
     @Override
-    public int numHands() {
-        return 0;
+    public char[][] numHands() {
+        return new char[0][];
     }
+
+
 }

@@ -1,4 +1,4 @@
 public interface IPlayer {
     public void play();
-    public int numHands();
+    public char[][]numHands();
 }

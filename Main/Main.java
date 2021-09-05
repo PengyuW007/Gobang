@@ -42,11 +42,14 @@ public class Main {
         do {
             int choice = scan.nextInt();
             if (choice == 1) {
-                //Play against person
+                //PVP
+                //Player p1 = new Human();
+               // Player p2 = new Human();
                 valid = true;
             } else if (choice == 2) {
-                //play with AI
-
+                // AI VS Human
+               // Player p1 = new Human();
+                //Player p2 = new AI();
                 valid = true;
             } else {
                 System.out.println("Not valid input. (Type 1 or 2)Try again!");
@@ -75,6 +78,7 @@ public class Main {
             } else if (choice == 3) {
                 //19*19
                game = new Game(19);
+               valid = true;
             } else {
                 System.out.println("Not valid input. (Type 1, 2 or 3)Try again!");
             }

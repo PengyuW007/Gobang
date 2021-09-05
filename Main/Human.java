@@ -1,12 +1,18 @@
 public class Human extends Player{
 
+    public Human(String chess) {
+        super(chess);
+    }
+
     @Override
     public void play() {
         
     }
 
     @Override
-    public int numHands() {
-        return 0;
+    public char[][] numHands() {
+        return new char[0][];
     }
+
+
 }

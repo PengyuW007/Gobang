@@ -1,11 +1,17 @@
-public abstract class Player implements  IPlayer{
-   private int row,col;
+public abstract class Player implements IPlayer {
+    private String chess;//black/white
 
-   public Player(){
 
-   }
+    public Player(String chess) {
 
-   public abstract void play();
-   public abstract int numHands();
+    }
+
+    public String getChess() {
+        return chess;
+    }
+
+    public abstract void play();
+
+    public abstract char[][] numHands();
 
 }
