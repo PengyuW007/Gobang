@@ -1,6 +1,6 @@
 public class Human extends Player{
 
-    public Human(String chess) {
+    public Human(Chess chess) {
         super(chess);
     }
 

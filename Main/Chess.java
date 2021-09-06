@@ -3,8 +3,8 @@ public class Chess {
     private String colour;//black/white
     private int step;
 
-    public Chess(){
-
+    public Chess(String colour){
+        this.colour = colour;
     }
 
     public char[][] getLocation() {
@@ -17,5 +17,9 @@ public class Chess {
 
     public String getColour() {
         return colour;
+    }
+
+    public int getStep(){
+        return step;
     }
 }

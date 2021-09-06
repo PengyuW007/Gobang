@@ -14,23 +14,9 @@ public class Game {
     }
 
     public void runGame(){
-
+        System.out.println("Board after initialization.....");
+        getBoard().printBoard();//print initialized board
 
     }
 
-    public void whoIsBlack(Player p1, Player p2){
-        Random ran = new Random(1);
-
-        //1. ai VS pp
-        //2. p1 vs p2
-        int black = ran.nextInt();
-
-        if(black==0){
-            p1.play();
-            p2.play();
-        }else{
-            p2.play();
-            p1.play();
-        }
-    }
 }

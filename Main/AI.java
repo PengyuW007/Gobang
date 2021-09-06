@@ -1,6 +1,6 @@
 public class AI extends Player{
 
-    public AI(String chess) {
+    public AI(Chess chess) {
         super(chess);
     }
 
