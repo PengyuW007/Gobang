@@ -6,9 +6,11 @@ public abstract class Player implements IPlayer {
         this.chess = chess;
     }
 
+    public Chess getChess(){
+        return chess;
+    }
 
-
-    public abstract void play();
+    public abstract void play(char[][]place);
 
     public abstract char[][] numHands();
 
