@@ -5,9 +5,12 @@ public class Human extends Player{
     }
 
     @Override
-    public void play(char[][]place) {
-        
+    public void play(int row, int col, char place,Board board) {
+        char grid[][] = board.getBoard();
+
+        grid[row][col] = place;
     }
+
 
     @Override
     public char[][] numHands() {

@@ -5,7 +5,7 @@ public class AI extends Player{
     }
 
     @Override
-    public void play(char[][]place) {
+    public void play(int row, int col, char place,Board board) {
 
     }
 

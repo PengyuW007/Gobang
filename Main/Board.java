@@ -16,6 +16,10 @@ public class Board {
         return grid;
     }//end getGrid
 
+    public char[][] getBoard() {
+        return board;
+    }
+
     public void printBoard() {
         for(int i = 0;i<grid;i++){
             System.out.println();

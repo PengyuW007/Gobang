@@ -10,7 +10,7 @@ public abstract class Player implements IPlayer {
         return chess;
     }
 
-    public abstract void play(char[][]place);
+    public abstract void play(int row,int col,char place,Board board);
 
     public abstract char[][] numHands();
 

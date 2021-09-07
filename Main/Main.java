@@ -47,7 +47,8 @@ public class Main {
                     }
                 }
                 size = initializeBoard();
-                Game game = new Game(size);
+                Game game = new Game(size,p1,p2);
+                //Game game = new Game(2,p1,p2);
                 game.runGame();
                 valid = true;
             } else if (startQuit == 2) {
