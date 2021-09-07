@@ -33,8 +33,9 @@
       1. to run the model,
       2. initialize game,
       3. set who first
-2. Player interface
-   1. AI
-   2. Human
+2. Player interface: IPlayer
+   1. Abstract class Player
+      1. AI
+      2. Human
 3. Chess
    1. White/Black
