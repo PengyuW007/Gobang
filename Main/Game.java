@@ -34,7 +34,7 @@ public class Game {
                 System.out.println("\n" + "P1 place: ");
                 row = scan.nextInt();
                 col = scan.nextInt();
-                System.out.println("("+row+","+col+")");
+                System.out.println("(" + row + "," + col + ")");
                 p1.play(row, col, black, getBoard());
                 steps++;
                 getBoard().printBoard();
@@ -42,7 +42,7 @@ public class Game {
                 System.out.println("\n" + "P2 place: ");
                 row = scan.nextInt();
                 col = scan.nextInt();
-                System.out.println("("+row+","+col+")");
+                System.out.println("(" + row + "," + col + ")");
                 p2.play(row, col, white, getBoard());
                 steps++;
                 getBoard().printBoard();
@@ -64,6 +64,30 @@ public class Game {
         }
 
         return win;
+    }
+
+    public boolean success(int row, int col) {
+        boolean succ = false, rec = false;
+        boolean line, diag;
+
+        char[][] table = board.getBoard();
+
+        char curr = table[row][col];
+
+        //4 cases of line: up down,left right
+        char up = table[row--][col];
+        char down = table[row++][col];
+        char left = table[row][col--];
+        char right = table[row][col++];
+
+        if (up == curr) {
+            rec = true;
+        }
+
+        //4 cases of diag
+
+
+        return succ;
     }
 
 }
