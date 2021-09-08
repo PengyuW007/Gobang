@@ -30,7 +30,8 @@ public class Game {
 
         if (colour.equals("Black")) {
             //p1 first
-            while (!endGame()) {
+            //while (!endGame()) {
+            do{
                 System.out.println("\n" + "P1 place: ");
                 row = scan.nextInt();
                 col = scan.nextInt();
@@ -46,45 +47,85 @@ public class Game {
                 p2.play(row, col, white, getBoard());
                 steps++;
                 getBoard().printBoard();
-            }
+            }while(!endGame(row,col));
+
+            //}
         } else {
             //white,p2 first
-            while (!endGame()) {
 
-            }
         }
 
     }//end runGame
 
-    public boolean endGame() {
-        boolean win = false;
+    public boolean endGame(int row,int col) {
+        boolean end = false;
 
-        if (steps == grid * grid) {
-            win = true;
+        if (steps == grid * grid||success(row,col)) {
+            //||success(row,col)
+            end = true;
         }
 
-        return win;
+        return end;
     }
 
     public boolean success(int row, int col) {
-        boolean succ = false, rec = false;
-        boolean line, diag;
-
+        boolean succ = false;
+        //boolean UP, DOWN, LEFT, RIGHT, LEFT_UP, RIGHT_UP, LEFT_DOWN, RIGHT_DOWN;
+        int count = 0, former = 0, last = 0;
         char[][] table = board.getBoard();
 
         char curr = table[row][col];
 
-        //4 cases of line: up down,left right
-        char up = table[row--][col];
-        char down = table[row++][col];
-        char left = table[row][col--];
-        char right = table[row][col++];
-
-        if (up == curr) {
-            rec = true;
+        /**********************************
+         4 cases of line: up down,left right
+         ***********************************/
+        // char up = table[row--][col];char down = table[row++][col];
+        //vertical
+        for (int i = row; i > 0; i--) {
+            if (table[i][col] == curr) {
+                former++;
+                if (former == 2 || table[i][col] != curr) {
+                    break;
+                }
+            }
         }
 
-        //4 cases of diag
+        for (int i = row; i < row; i++) {
+            if (table[i][col] == curr) {
+                last++;
+                if (last == 2 || table[i][col] != curr) {
+                    break;
+                }
+            }
+        }
+
+        count = former + last;
+
+        if (count == 2) {
+            succ = true;
+        } else {
+            //initialize counters to 0
+            count = 0;
+            former = 0;
+            last = 0;
+            //char left = table[row][col--];char right = table[row][col++];
+            //horizontal
+            for (int i = col; i > 0; i--) {
+                if (table[row][i]==curr){
+                    former++;
+                    if(former>=5||table[row][i]!=curr){
+                        break;
+                    }
+                }
+            }
+        }
+
+        //4 cases of diag,leftUp,rightUp,leftDown, rightDown,
+        char leftUp = table[row--][col--];
+        char rightDown = table[row++][col++];
+
+        char rightUp = table[row--][col++];
+        char leftDown = table[row++][col--];
 
 
         return succ;
